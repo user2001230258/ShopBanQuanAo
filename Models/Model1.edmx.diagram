@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2bc2e81d3d764f65836e1cae42ffde28" Name="Diagram1">
+        <EntityTypeShape EntityType="DO_AN_GIOVANNIModel.BIENTHE" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DO_AN_GIOVANNIModel.DANHMUC" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DO_AN_GIOVANNIModel.DONHANG" Width="1.5" PointX="6.375" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DO_AN_GIOVANNIModel.KHACHHANG" Width="1.5" PointX="4.625" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DO_AN_GIOVANNIModel.THUONGHIEU" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="DO_AN_GIOVANNIModel.FK__DONHANG__MaKH__44FF419A" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DO_AN_GIOVANNIModel.SANPHAM" Width="1.5" PointX="7" PointY="5" />
+        <AssociationConnector Association="DO_AN_GIOVANNIModel.FK__BIENTHE__MaSP__3F466844" />
+        <AssociationConnector Association="DO_AN_GIOVANNIModel.FK__SANPHAM__MaDM__3C69FB99" />
+        <AssociationConnector Association="DO_AN_GIOVANNIModel.FK__DONHANG__MaSP__46E78A0C" />
+        <AssociationConnector Association="DO_AN_GIOVANNIModel.FK__SANPHAM__MaTH__3B75D760" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
