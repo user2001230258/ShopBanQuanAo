@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Sản phẩm Giovanni";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+@using webmvc.Models;
+@model IEnumerable<SANPHAM>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">SẢN PHẨM GIOVANNI OUTLET</h2>
+
+    <div class="row g-4">
+        @foreach (var sp in Model)
+        {
+            var giam = (sp.GiaGiam != null && sp.GiaGoc > 0)
+                ? Math.Round((decimal)((sp.GiaGoc - sp.GiaGiam) * 100 / sp.GiaGoc))
+                : 0;
+
+            <div class="col-6 col-md-3">
+                <div class="card h-100 border-0 shadow-sm text-center position-relative">
+
+                    <div style="width:100%; height:260px; overflow:hidden; position:relative; display:flex; justify-content:center; align-items:center;">
+                        <img src="@Url.Content("~/Content/HINHANH/" + sp.AnhBia)"
+                             alt="@sp.TenSP"
+                             class="img-fluid"
+                             style="max-width:100%; max-height:100%;"
+                       />
+
+                        @if (giam > 0)
+                        {
+                            <span class="badge bg-danger position-absolute"
+                                  style="top:10px; left:10px; font-size:13px; padding:6px 10px;">
+                                -@giam%
+                            </span>
+                        }
+                    </div>
+
+           
+                    <div class="card-body">
+                        <h6 class="text-uppercase text-muted mb-1">@sp.THUONGHIEU.TenTH</h6>
+                        <p class="fw-bold mb-2">@sp.TenSP</p>
+
+                        <div class="mb-2">
+                            @if (sp.GiaGiam != null)
+                            {
+                                <span class="fw-bold text-danger">@String.Format("{0:N0}₫", sp.GiaGiam)</span>
+                                <span class="text-muted text-decoration-line-through ms-2" style="font-size:13px;">
+                                    @String.Format("{0:N0}₫", sp.GiaGoc)
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="fw-bold">@String.Format("{0:N0}₫", sp.GiaGoc)</span>
+                            }
+                        </div>
+
+                        <button class="btn btn-dark btn-sm px-3">
+                            <i class="bi bi-bag"></i> Mua hàng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

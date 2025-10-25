@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row  bg-white">
+            <div class="col-12 text-center">
+                <p>
+                    Miễn phí vận chuyển với đơn hàng trên<b>1 Triệu</b>
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-white" style="background-color: #193D87">
+            <div class="col-4">
+                <p>
+                    Hotline: <b>18000 888 38</b> (8h - 12h, 13h00 - 17h30)
+                </p>
+            </div>
+
+            <div class="col-2">
+                <a href="#" class="text-white">Liên Hệ</a>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-2">
+                <label>
+
+                    <a href="#" class="text-white"> Thông Báo Của Tôi</a>
+                </label>
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col-3">
+                <img src="https://theme.hstatic.net/200000961893/1001324079/14/logo.png?v=206" style="width:150px;">
+            </div>
+            <div class="col-3">
+                <form action="">
+                    <input type="text" />
+                    <button type="submit">Tìm Kiếm</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Trang Chủ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " href="#">
+                            Tìm Kiếm
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Thời Trang Nam
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Thời Trang Nữ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Sản Phẩm Mới
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+          @Html.Action("MENU_ChuDe", "Home")
+            </div>
+            <div class="col-8">
+
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER GIOVANNI -->
+        <footer class="text-white mt-5" style="background-color:#0e3fa9;">
+            <div class="container-fluid py-4 px-5">
+                <div class="row align-items-center pb-4 border-bottom border-secondary">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <h6 class="text-uppercase mb-3">Đăng ký nhận tin</h6>
+                        <form class="d-flex">
+                            <input type="email" class="form-control me-2" placeholder="Nhập email của bạn">
+                            <button class="btn btn-dark text-white px-4" type="submit">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Thông tin chi tiết -->
+                <div class="row mt-4">
+                    <!-- Cột 1 -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase mb-3">Về GIOVANNI</h6>
+                        <p>
+                            CÔNG TY CỔ PHẦN QUẦN ÁO GIOVANNI<br>
+                            Mã số doanh nghiệp 2001230404<br>
+                            Người chịu trách nhiệm quản lý website: Nguyễn Phong Khoa
+                        </p>
+                        <p>140 lê trọng tấn,tây thạnh tpchm</p>
+                        <p>hotline:1800088838</p>
+                        <p>email:customerservice@giovannigroup.com.vn</p>
+                        <p>Phương thức thanh toán:</p>
+                        <img src="~/Content/HINHANH/vnpay.jpg" style="width:80px; background:white; padding:5px; border-radius:5px;">
+                        <div class="mt-5"> 
+                            <img src="~/Content/HINHANH/logo-bocongthuong_c2c7ef2468.png" alt="Bộ Công Thương" style="width:400px;">
+                        </div>
+                    </div>
+
+                    <!-- Cột 2 -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase mb-3">Hỗ trợ khách hàng</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white text-decoration-none">Sản phẩm khuyến mãi</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Sản phẩm nổi bật</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Tất cả sản phẩm</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Cột 3 -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase mb-3">Liên kết</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white text-decoration-none">Sản phẩm mới</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Nam</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Nữ</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Phụ kiện</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Thương hiệu</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">SALE</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Cột 4 -->
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase mb-3">Chính sách</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white text-decoration-none">Giới thiệu</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Hướng dẫn mua hàng</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Chính sách kiểm hàng</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Chính sách vận chuyển</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Chính sách thanh toán</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Chính sách bảo mật</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Giải quyết khiếu nại</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Chính sách đổi trả</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center pt-3 border-top border-secondary mt-3">
+                    <p class="mb-0">Copyright © 2025 Giovanni Outlet. Powered by Dai Hoc Cong Thuong TPHCM NHOM WEB MVC</p>
+                </div>
+            </div>
+        </footer>
+
+   
+
+
+    </div>
+
+
+</body>
+</html>
